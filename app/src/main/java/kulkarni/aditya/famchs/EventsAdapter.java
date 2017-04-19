@@ -13,9 +13,7 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
-/**
- * Created by adicool on 19/4/17.
- */
+
 public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder> {
 
     private ArrayList<Events> events;

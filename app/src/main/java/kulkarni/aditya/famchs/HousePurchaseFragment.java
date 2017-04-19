@@ -4,9 +4,15 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
 
 
 /**
@@ -26,6 +32,7 @@ public class HousePurchaseFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private ArrayList<Purchase> purchases;
 
     private OnFragmentInteractionListener mListener;
 
@@ -63,8 +70,28 @@ public class HousePurchaseFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        ActionBar actionBar = activity.getSupportActionBar();
+        actionBar.setTitle("Purchases");
+
+        View rootView = inflater.inflate(R.layout.fragment_house_purchase,container,false);
+
+        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.purchase_recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        purchases = new ArrayList<Purchase>();
+        purchases.add(new Purchase("House for RENT","I have a 2 BHK flat for renting." +
+                "The building number is 20." +
+                "And the flat no is 603",R.drawable.images,"Contact : 8823978465"));
+        purchases.add(new Purchase("House for Buying","I have a 2 BHK flat to sell." +
+                "The building number is 10." +
+                "And the flat no. is 204",R.drawable.secondimage,"Contact : 9876543210"));
+
+        final PurchaseAdapter adapter = new PurchaseAdapter(purchases);
+        recyclerView.setAdapter(adapter);
+
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_house_purchase, container, false);
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
