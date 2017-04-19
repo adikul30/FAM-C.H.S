@@ -14,26 +14,16 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp">
-
-        <ImageView
-            android:id="@+id/person_photo"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginLeft="5dp"
-            android:src="@mipmap/ic_launcher"
-            android:layout_marginRight="10dp" />
+        android:background="#001829"
+        android:padding="15dp">
 
         <TextView
             android:id="@+id/event_card_title"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="0dp"
-            android:layout_toRightOf="@+id/person_photo"
-            android:textColor="@color/colorPrimary"
+            android:layout_marginLeft="5dp"
+            android:textColor="#ffffff"
             android:textSize="22sp" />
 
         <TextView
@@ -46,7 +36,7 @@
             android:minLines="1"
             android:maxLines="7"
             android:paddingBottom="10dp"
-            android:textColor="#777777"
+            android:textColor="#ffffff"
             android:textSize="18sp" />
 
 

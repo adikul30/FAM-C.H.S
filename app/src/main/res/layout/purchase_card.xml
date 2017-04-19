@@ -13,7 +13,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#ffffff"
+        android:background="#001829"
         android:padding="10dp">
 
         <ImageView
@@ -29,10 +29,9 @@
             android:layout_marginLeft="10dp"
             android:layout_marginTop="135dp"
             android:paddingTop="10dp"
-            android:textColor="@color/colorPrimary"
+            android:textColor="#ffffff"
             android:textSize="22sp"
-            tools:text="RENT / LEASE"
-            tools:textColor="#000000" />
+            tools:text="RENT / LEASE" />
 
         <TextView
             android:id="@+id/purchase_decription"
@@ -43,19 +42,21 @@
             android:maxLines="3"
             android:minLines="1"
             android:paddingTop="10dp"
-            android:textColor="#777777"
+            android:textColor="#ffffff"
             android:textSize="18sp"
             tools:text="I have this house for rent" />
 
         <TextView
             android:id="@+id/purchase_contact"
-            android:textStyle="bold"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            tools:text="Contact : 9876543210"
-            android:layout_below="@id/purchase_decription" />
+            android:layout_below="@id/purchase_decription"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="#ffffff"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            tools:text="Contact : 9876543210" />
 
     </RelativeLayout>
 

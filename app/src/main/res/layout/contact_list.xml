@@ -1,41 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:id="@+id/rootView"
-    android:padding="10dp"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#001829"
+    android:orientation="vertical"
+    android:padding="10dp">
 
     <TextView
         android:id="@+id/occupation"
-        android:padding="10dp"
-        tools:text="Plumber : "
-        android:textSize="18sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        tools:text="Plumber : " />
+
     <TextView
+        android:id="@+id/technician_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_toEndOf="@id/occupation"
         android:layout_toRightOf="@id/occupation"
-        android:id="@+id/technician_name"
         android:padding="10dp"
-        tools:text="Name Surname"
+        android:textColor="#FFFFFF"
         android:textSize="18sp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        tools:text="Name Surname" />
+
     <TextView
-        android:layout_below="@id/occupation"
         android:id="@+id/technician_number"
-        android:padding="10dp"
-        android:textStyle="bold"
-        tools:text="Contact : 1527585940"
-        android:textSize="18sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_below="@id/occupation"
+        android:padding="10dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Contact : 1527585940" />
+
     <View
-        android:layout_below="@id/technician_number"
         android:layout_width="fill_parent"
         android:layout_height="0.5dp"
-        android:background="#000000"/>
+        android:layout_below="@id/technician_number"
+        android:background="#ffffff" />
 
 </RelativeLayout>

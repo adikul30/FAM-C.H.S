@@ -71,7 +71,7 @@ public class ContactsFragment extends Fragment {
                              Bundle savedInstanceState) {
         AppCompatActivity activity = (AppCompatActivity) getActivity();
         ActionBar actionBar = activity.getSupportActionBar();
-        actionBar.setTitle("Events");
+        actionBar.setTitle("Contacts");
 
         View rootView =  inflater.inflate(R.layout.fragment_events, container, false);
         RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.events_recycler_view);
