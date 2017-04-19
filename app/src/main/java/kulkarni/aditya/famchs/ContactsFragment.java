@@ -4,9 +4,15 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
 
 
 /**
@@ -26,7 +32,7 @@ public class ContactsFragment extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
-
+    private ArrayList<Contact> technicians;
     private OnFragmentInteractionListener mListener;
 
     public ContactsFragment() {
@@ -63,8 +69,24 @@ public class ContactsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_contacts, container, false);
+        AppCompatActivity activity = (AppCompatActivity) getActivity();
+        ActionBar actionBar = activity.getSupportActionBar();
+        actionBar.setTitle("Events");
+
+        View rootView =  inflater.inflate(R.layout.fragment_events, container, false);
+        RecyclerView recyclerView = (RecyclerView) rootView.findViewById(R.id.events_recycler_view);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+
+        technicians = new ArrayList<Contact>();
+
+        technicians.add(new Contact("Plumber : ","Rakesh Kumar","Contact : 9645625725"));
+        technicians.add(new Contact("Electrician : ","Rohil Kumar","Contact : 9645624525"));
+
+
+        final ContactAdapter adapter = new ContactAdapter(technicians);
+        recyclerView.setAdapter(adapter);
+
+        return rootView;
     }
 
     // TODO: Rename method, update argument and hook method into UI event
