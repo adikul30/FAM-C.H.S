@@ -26,8 +26,6 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.ViewHolder
         CardView cv;
         TextView title;
         TextView description;
-        TextView created_at;
-        TextView tags;
 
         ViewHolder(View itemView) {
             super(itemView);
