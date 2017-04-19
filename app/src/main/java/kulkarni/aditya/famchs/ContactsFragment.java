@@ -81,6 +81,9 @@ public class ContactsFragment extends Fragment {
 
         technicians.add(new Contact("Plumber : ","Rakesh Kumar","Contact : 9645625725"));
         technicians.add(new Contact("Electrician : ","Rohil Kumar","Contact : 9645624525"));
+        technicians.add(new Contact("Occupation : ","Name Surname","Contact : 9645624525"));
+        technicians.add(new Contact("Occupation : ","Name Surname","Contact : 9645624525"));
+        technicians.add(new Contact("Occupation : ","Name Surname","Contact : 9645624525"));
 
 
         final ContactAdapter adapter = new ContactAdapter(technicians);

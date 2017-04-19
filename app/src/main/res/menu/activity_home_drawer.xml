@@ -4,23 +4,23 @@
     <group android:checkableBehavior="single">
         <item
             android:id="@+id/nav_events"
-            android:icon="@drawable/ic_menu_camera"
+
             android:title="Events" />
         <item
             android:id="@+id/nav_notices"
-            android:icon="@drawable/ic_menu_gallery"
+
             android:title="Notices" />
         <item
             android:id="@+id/nav_purchase"
-            android:icon="@drawable/ic_menu_slideshow"
+
             android:title="Rent / Buy" />
         <item
             android:id="@+id/nav_contacts"
-            android:icon="@drawable/ic_menu_manage"
+
             android:title="Contacts" />
         <item
             android:id="@+id/nav_bills"
-            android:icon="@drawable/ic_menu_share"
+
             android:title="Bills" />
     </group>
 

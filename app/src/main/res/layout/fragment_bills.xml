@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#001829"
-    android:padding="10dp"
+    android:padding="20dp"
     tools:context="kulkarni.aditya.famchs.BillsFragment">
 
     <TextView
@@ -32,7 +32,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/maintenance"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="ClubHouse Charges : 500"
         android:textColor="#ffffff"
         android:textSize="18sp" />
@@ -42,7 +42,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/clubhouse"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="Miscellaneous : 200"
         android:textColor="#ffffff"
         android:textSize="18sp" />
@@ -63,7 +63,7 @@
         android:layout_below="@id/total"
         android:layout_marginLeft="130dp"
         android:layout_marginStart="130dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/button"
         android:text="PAY NOW"
         android:textColor="#FFFFFF" />
